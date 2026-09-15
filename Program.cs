@@ -33,6 +33,20 @@
             }
             PrintBookTitle("Clean Code");
             #endregion
+
+
+            #region Question 5
+            int pages = 400;
+            static void AddBonusPages(int pages)
+            {
+                pages = pages + 50;   //450 
+            }
+            AddBonusPages(pages);
+            Console.WriteLine(pages);  
+            //400 the value didn't change cause int is avalue type and the methods gets a copy
+
+           
+            #endregion
         }
     }
 }
