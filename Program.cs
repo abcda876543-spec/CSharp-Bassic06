@@ -8,6 +8,15 @@
             double[] prices = { 25.5, 33.75 };
             Console.WriteLine(prices[1]);
             #endregion
+
+
+            #region Question 2
+            int[,] shelfCopies = new int[2, 2] {
+                {3,5 },
+                {1,4 }
+            };
+            Console.WriteLine(shelfCopies[1, 0]);
+            #endregion
         }
     }
 }
