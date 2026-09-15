@@ -5,8 +5,10 @@
         static void Main(string[] args)
         {
             #region Qestion 1
-            double[] prices = { 25.5, 33.75 };
-            Console.WriteLine(prices[1]);
+            {
+                double[] prices = { 25.5, 33.75 };
+                Console.WriteLine(prices[1]);
+            }
             #endregion
 
 
@@ -42,10 +44,24 @@
                 pages = pages + 50;   //450 
             }
             AddBonusPages(pages);
-            Console.WriteLine(pages);  
+            Console.WriteLine(pages);
             //400 the value didn't change cause int is avalue type and the methods gets a copy
 
-           
+
+            #endregion
+
+            #region Question 6 
+            {
+                double[] prices = { 25.5, 40.0 };
+                static void ApplyDiscount(double[] prices)
+                {
+                    prices[0] = prices[0] - 5;    //20.5
+                }
+               
+                ApplyDiscount(prices);
+                Console.WriteLine(prices[0]); 
+                //20.5 value changed because double[] is a ref type and the method gets the original value
+            }
             #endregion
         }
     }
