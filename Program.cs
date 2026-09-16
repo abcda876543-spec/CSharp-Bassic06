@@ -63,6 +63,16 @@
                 //20.5 value changed because double[] is a ref type and the method gets the original value
             }
             #endregion
+
+
+            #region Question 7
+            static void AddBonusPagesByRef(ref int pages){
+                pages = pages + 50;
+
+            }
+            AddBonusPagesByRef(ref pages);
+            Console.WriteLine(pages); //the value changed ref is a keyword lets the method gets the original value not the copy
+            #endregion
         }
     }
 }
