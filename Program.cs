@@ -1,14 +1,16 @@
-﻿namespace C__Basics06
+﻿using System.Diagnostics;
+
+namespace C__Basics06
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             #region Qestion 1
-            {
-                double[] prices = { 25.5, 33.75 };
-                Console.WriteLine(prices[1]);
-            }
+            { 
+            double[] prices = { 25.5, 33.75 };
+            Console.WriteLine(prices[1]);
+        }
             #endregion
 
 
@@ -73,6 +75,19 @@
             AddBonusPagesByRef(ref pages);
             Console.WriteLine(pages); //the value changed ref is a keyword lets the method gets the original value not the copy
             #endregion
+
+
+            #region Question 8
+            {
+                double[] prices = { 25.5, 40.0 };
+                static void ReplaceArray(ref double[] prices)
+                {
+                    prices = new double[] { 10.0, 12.5, 15.0 };
+                }
+                ReplaceArray(ref prices);
+                Console.WriteLine(prices.Length);
+            }
+            #endregion
+            }
         }
-    }
 }
