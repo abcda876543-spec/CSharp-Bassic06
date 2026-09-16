@@ -1,16 +1,31 @@
 ﻿using System.Diagnostics;
+using System.Reflection;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace C__Basics06
 {
     internal class Program
     {
+        static bool TryGetPrice(string title, out double price)
+        {
+            if (title == "Clean Code")
+            {
+                price = 25.5;
+                return true;
+            }
+            else
+            {
+                price = 0;
+                return false;
+            }
+        }
         static void Main(string[] args)
         {
             #region Qestion 1
-            { 
-            double[] prices = { 25.5, 33.75 };
-            Console.WriteLine(prices[1]);
-        }
+            {
+                double[] prices = { 25.5, 33.75 };
+                Console.WriteLine(prices[1]);
+            }
             #endregion
 
 
@@ -23,7 +38,7 @@ namespace C__Basics06
             #endregion
 
             #region Question 3
-           static void PrintWelcomeMessage()
+            static void PrintWelcomeMessage()
             {
                 Console.WriteLine("Welcome to the Library!");
             }
@@ -31,7 +46,7 @@ namespace C__Basics06
             #endregion
 
             #region Question 4 
-            static void PrintBookTitle (string title)
+            static void PrintBookTitle(string title)
             {
                 Console.WriteLine("Book title: " + title);
             }
@@ -59,16 +74,17 @@ namespace C__Basics06
                 {
                     prices[0] = prices[0] - 5;    //20.5
                 }
-               
+
                 ApplyDiscount(prices);
-                Console.WriteLine(prices[0]); 
+                Console.WriteLine(prices[0]);
                 //20.5 value changed because double[] is a ref type and the method gets the original value
             }
             #endregion
 
 
             #region Question 7
-            static void AddBonusPagesByRef(ref int pages){
+            static void AddBonusPagesByRef(ref int pages)
+            {
                 pages = pages + 50;
 
             }
@@ -87,7 +103,16 @@ namespace C__Basics06
                 ReplaceArray(ref prices);
                 Console.WriteLine(prices.Length);
             }
-            #endregion
-            }
         }
+
+            #endregion
+
+
+        #region Question 9
+        string title = "Clean Code";
+        double price;
+
+
+        #endregion
+    }
 }
