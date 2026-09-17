@@ -131,5 +131,17 @@ namespace C__Basics06
         PrintBookInfo(pages: 300, title: "C# Basics");
         #endregion
 
+        #region Question 12
+        static void PrintAllTitles(params string[] titles)
+        {
+            foreach (string title in titles)
+            {
+                Console.WriteLine(title);
+            }
+        }
+
+        PrintAllTitles("C# Basics", "Clean Code", "ASP.NET");
+        #endregion
+
     }
 }
