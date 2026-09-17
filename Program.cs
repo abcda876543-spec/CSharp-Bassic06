@@ -114,5 +114,18 @@ namespace C__Basics06
 
 
         #endregion
+
+        #region Question 10
+        void PrintBookInfo(string title, int pages = 300)
+        {
+            Console.WriteLine("Title: " + title);
+            Console.WriteLine("Pages: " + pages);
+        }
+        PrintBookInfo();
+        PrintBookInfo();
+    
+
+        #endregion
+        
     }
 }
